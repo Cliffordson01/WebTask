@@ -206,7 +206,7 @@ Cada exercício propõe o uso obrigatório de uma **tag HTML** e uma **proprieda
 
 ## ✨ Créditos
 
-Criado por [Seu Nome] — Explorando os fundamentos do desenvolvimento Front-End com criatividade e técnica.
+Criado por Cliffordson Cetoute | Gabriel Ribeiro | Gabriel Dalecio — Explorando os fundamentos do desenvolvimento Front-End com criatividade e técnica.
 
 ---
 
