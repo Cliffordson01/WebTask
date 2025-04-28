@@ -7,7 +7,7 @@ Cada exercício propõe o uso obrigatório de uma **tag HTML** e uma **proprieda
 
 ## 📚 Sumário
 
-- [1. Página de Introdução](#1-página-de-introdução)
+- [1. Página de Introdução](#Exe01)
 - [2. Página de Perfil](#2-página-de-perfil)
 - [3. Página de Portfólio](#3-página-de-portfólio)
 - [4. Página de Blog](#4-página-de-blog)
