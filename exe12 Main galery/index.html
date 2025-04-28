@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Minha Galeria de Fotos De Carros</h1>
+
+    <div class="gallery">
+        <!-- Item 1 -->
+        <div class="car-group">
+            <h2>Porsche</h2>
+            <label for="modal-1" class="gallery-item">
+                <figure>
+                    <img src="imgs/1.jpg" alt="Paisagem 1" class="thumbnail">
+                    <figcaption> Porsche Cayenne </figcaption>
+                    <img src="imgs/2.jpg" alt="Paisagem 2" class="thumbnail">
+                    <figcaption> Porsche Macan </figcaption>
+                    <img src="imgs/3.webp" alt="Paisagem 3" class="thumbnail">
+                    <figcaption> Porsche 911 Turbo </figcaption>
+                    <img src="imgs/4.jpg" alt="Paisagem 4" class="thumbnail">
+                    <figcaption> Porsche Panamera </figcaption>
+                </figure>
+            </label>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="car-group">
+            <h2>BMW</h2>
+            <label for="modal-2" class="gallery-item">
+                <figure>
+                    <img src="imgs/5.jpg" alt="Paisagem 1" class="thumbnail">
+                    <figcaption> Bmw Serie 3 </figcaption>
+                    <img src="imgs/6.jpg" alt="Paisagem 2" class="thumbnail">
+                    <figcaption> Bmw 320i </figcaption>
+                    <img src="imgs/7.webp" alt="Paisagem 3" class="thumbnail">
+                    <figcaption> Bmw Serie 7 </figcaption>
+                    <img src="imgs/8.jpg" alt="Paisagem 4" class="thumbnail">
+                    <figcaption> Bmw M4 G83 Convertible </figcaption>
+                </figure>
+            </label>
+        </div>
+        <!-- Item 3 -->
+        <div class="car-group">
+            <h2>Ferrari</h2>
+            <label for="modal-3" class="gallery-item">
+                <figure>
+                    <img src="imgs/9.jpg" alt="Paisagem 1" class="thumbnail">
+                    <figcaption> Ferrari SF90 </figcaption>
+                    <img src="imgs/10.jpg" alt="Paisagem 2" class="thumbnail">
+                    <figcaption> Ferrari 812 GTS </figcaption>
+                    <img src="imgs/11.jpg" alt="Paisagem 3" class="thumbnail">
+                    <figcaption> Ferrari 458 </figcaption>
+                    <img src="imgs/12.jpg" alt="Paisagem 4" class="thumbnail">
+                    <figcaption> Ferrari Purosangue </figcaption>
+                </figure>
+            </label>
+        </div>
+    </div>
+
+    <!-- Modais para tela cheia -->
+    <input type="radio" id="modal-1" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-12" class="prev">&#10094;</label>
+        <label for="modal-2" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/1.jpg" alt="Porsche Cayenne">
+        <div class="caption">Porsche Cayenne</div>
+    </div>
+
+    <input type="radio" id="modal-2" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-1" class="prev">&#10094;</label>
+        <label for="modal-3" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/2.jpg" alt="Porsche Macan">
+        <div class="caption">Porsche Macan</div>
+    </div>
+
+    <input type="radio" id="modal-3" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-2" class="prev">&#10094;</label>
+        <label for="modal-4" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/3.webp" alt="Porsche 911 Turbo">
+        <div class="caption">Porsche 911 Turbo</div>
+    </div>
+
+    <input type="radio" id="modal-4" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-3" class="prev">&#10094;</label>
+        <label for="modal-5" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/4.jpg" alt="Porsche Panamera">
+        <div class="caption">Porsche Panamera</div>
+    </div>
+
+    <input type="radio" id="modal-5" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-4" class="prev">&#10094;</label>
+        <label for="modal-6" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/5.jpg" alt="BMW Série 3">
+        <div class="caption">BMW Série 3</div>
+    </div>
+
+    <input type="radio" id="modal-6" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-5" class="prev">&#10094;</label>
+        <label for="modal-7" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/6.jpg" alt="BMW 320i">
+        <div class="caption">BMW 320i</div>
+    </div>
+
+    <input type="radio" id="modal-7" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-6" class="prev">&#10094;</label>
+        <label for="modal-8" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/7.webp" alt="BMW Série 7">
+        <div class="caption">BMW Série 7</div>
+    </div>
+
+    <input type="radio" id="modal-8" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-7" class="prev">&#10094;</label>
+        <label for="modal-9" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/8.jpg" alt="BMW M4 G83 Convertible">
+        <div class="caption">BMW M4 G83 Convertible</div>
+    </div>
+
+    <input type="radio" id="modal-9" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-8" class="prev">&#10094;</label>
+        <label for="modal-10" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/9.jpg" alt="Ferrari SF90">
+        <div class="caption">Ferrari SF90</div>
+    </div>
+
+    <input type="radio" id="modal-10" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-9" class="prev">&#10094;</label>
+        <label for="modal-11" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/10.jpg" alt="Ferrari 812 GTS">
+        <div class="caption">Ferrari 812 GTS</div>
+    </div>
+
+    <input type="radio" id="modal-11" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-10" class="prev">&#10094;</label>
+        <label for="modal-12" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/11.jpg" alt="Ferrari 458">
+        <div class="caption">Ferrari 458</div>
+    </div>
+
+    <input type="radio" id="modal-12" name="modal" class="modal-radio">
+    <div class="modal">
+        <label for="modal-11" class="prev">&#10094;</label>
+        <label for="modal-1" class="next">&#10095;</label>
+        <label for="close" class="close">&times;</label>
+        <img class="modal-content" src="imgs/12.jpg" alt="Ferrari Purosangue">
+        <div class="caption">Ferrari Purosangue</div>
+    </div>
+
+    <input type="radio" id="close" name="modal" class="modal-radio">
+</body>
+
+</html>
