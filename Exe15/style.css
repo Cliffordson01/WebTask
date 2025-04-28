@@ -290,20 +290,6 @@ body {
     100% { content: '0'; }
 }
 
-.days .time-value::after {
-    animation: countdown 1209500s steps(14) infinite;
-    content: '14';
-}
-
-.hours .time-value::after {
-    animation: countdown 86400s steps(24) infinite;
-    content: '23';
-}
-
-.minutes .time-value::after {
-    animation: countdown 3600s steps(60) infinite;
-    content: '59';
-}
 
 .seconds .time-value::after {
     animation: countdown 14s steps(60) infinite;
