@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Aether</a>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="listTarefa">
+        <fieldset class="concluidas">
+            <legend>Tarefas Completadas</legend>
+            
+            <!-- Tarefa 1 -->
+            <div class="task-container">
+                <input type="checkbox" id="task1" checked>
+                <label for="task1">Viagem para Europa</label>
+                <div class="task-actions">
+                    <button class="task-btn edit-btn">Editar</button>
+                    <button class="task-btn delete-btn">Excluir</button>
+                </div>
+            </div>
+            
+            <!-- Tarefa 2 -->
+            <div class="task-container">
+                <input type="checkbox" id="task2" checked>
+                <label for="task2">Estudar para o teste</label>
+                <div class="task-actions">
+                    <button class="task-btn edit-btn">Editar</button>
+                    <button class="task-btn delete-btn">Excluir</button>
+                </div>
+            </div>
+            
+            <!-- Tarefa 3 -->
+            <div class="task-container">
+                <input type="checkbox" id="task3" checked>
+                <label for="task3">Fazer compras</label>
+                <div class="task-actions">
+                    <button class="task-btn edit-btn">Editar</button>
+                    <button class="task-btn delete-btn">Excluir</button>
+                </div>
+            </div>
+            
+            <!-- Tarefa 4 -->
+            <div class="task-container">
+                <input type="checkbox" id="task4" checked>
+                <label for="task4">Visitar Hawai</label>
+                <div class="task-actions">
+                    <button class="task-btn edit-btn">Editar</button>
+                    <button class="task-btn delete-btn">Excluir</button>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="adicionarTarefas">
+            <legend>Adicionar Tarefas</legend>
+            <div class="add-task-form">
+                <input type="text" id="adicionarTarefas" name="adicionarTarefas" placeholder="Digite uma nova tarefa...">
+                <button class="add-btn">Adicionar</button>
+            </div>
+        </fieldset>
+    </section>
+</body>
+</html>

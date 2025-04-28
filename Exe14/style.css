@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6c5ce7;
+    --secondary: #fd79a8;
+    --accent: #00cec9;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #dfe6e9 100%);
+    color: var(--dark);
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+}
+
+/* Header */
+.team-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.team-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--primary);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.team-header h1::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+.team-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--dark);
+}
+
+/* Container de Equipe */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+/* Card de Membro */
+.team-member {
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.team-member:hover {
+    transform: translateY(-15px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.member-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-social {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.team-member:hover .member-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.member-info {
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.member-role {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 206, 201, 0.1);
+    border-radius: 50px;
+}
+
+.member-bio {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.member-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill {
+    background: var(--light);
+    color: var(--dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Efeitos Especiais */
+.team-member:nth-child(odd) {
+    transform-origin: bottom right;
+}
+
+.team-member:nth-child(even) {
+    transform-origin: bottom left;
+}
+
+.team-member::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.team-member:hover::after {
+    opacity: 1;
+}
+
+/* Membro Destaque */
+.featured-member {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.featured-member .member-image {
+    width: 40%;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.featured-member .member-info {
+    width: 60%;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-member .member-name {
+    font-size: 2rem;
+}
+
+.featured-member .member-bio {
+    font-size: 1rem;
+}
+
+.featured-member .member-social {
+    justify-content: flex-start;
+    position: static;
+    opacity: 1;
+    transform: none;
+    margin-top: 1rem;
+}
+
+/* Decorações */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    top: -100px;
+    right: -100px;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: var(--secondary);
+    bottom: -50px;
+    left: -50px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .featured-member {
+        flex-direction: column;
+    }
+    
+    .featured-member .member-image {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    
+    .featured-member .member-info {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .featured-member .member-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .team-header h1 {
+        font-size: 2rem;
+    }
+    
+    .team-header p {
+        font-size: 1rem;
+    }
+    
+    .team-member {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Animação */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}

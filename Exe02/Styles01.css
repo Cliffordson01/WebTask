@@ -1,0 +1,456 @@
+:root {
+    --cosmic-primary: #0b0c21;
+    --cosmic-secondary: #1a1c3a;
+    --cosmic-accent: #4e3df1;
+    --cosmic-highlight: #00f7ff;
+    --cosmic-text: #e0e0ff;
+    --cosmic-text-dim: #a0a0c0;
+    --cosmic-glow: 0 0 10px rgba(78, 61, 241, 0.7);
+    --cosmic-glow-high: 0 0 20px rgba(0, 247, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, var(--cosmic-primary) 0%, #000000 100%);
+    color: var(--cosmic-text);
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://assets.codepen.io/13471/stars.png') repeat;
+    z-index: -2;
+    opacity: 0.8;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(11, 12, 33, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(78, 61, 241, 0.3);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cosmic-highlight);
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: var(--cosmic-glow);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: var(--cosmic-glow-high);
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--cosmic-text-dim);
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cosmic-highlight);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+    width: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imageBG {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    filter: brightness(0.7) contrast(1.2);
+}
+
+.profile {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 5% 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.perfil {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.aetheler {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+}
+
+.nome {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cosmic-text);
+    text-shadow: var(--cosmic-glow);
+    letter-spacing: 2px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.stat {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(26, 28, 58, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(78, 61, 241, 0.3);
+    box-shadow: var(--cosmic-glow);
+    transition: all 0.5s ease;
+}
+
+.stat:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--cosmic-glow-high);
+}
+
+.stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(0, 247, 255, 0.1), transparent);
+    border-radius: 15px;
+    animation: shine 3s infinite;
+}
+
+.label {
+    display: block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    color: var(--cosmic-text-dim);
+    margin-bottom: 0.5rem;
+}
+
+.number {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+}
+
+.image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 3rem;
+    z-index: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--cosmic-highlight);
+    box-shadow: 
+        0 0 20px var(--cosmic-accent),
+        0 0 40px rgba(78, 61, 241, 0.5),
+        inset 0 0 20px rgba(0, 247, 255, 0.3);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--cosmic-accent), var(--cosmic-highlight), var(--cosmic-accent));
+    background-size: 200% 200%;
+    animation: gradientRotate 4s linear infinite;
+    z-index: 1;
+    filter: blur(15px);
+    opacity: 0.7;
+}
+
+.image:hover .img {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 30px var(--cosmic-accent),
+        0 0 60px rgba(78, 61, 241, 0.7),
+        inset 0 0 30px rgba(0, 247, 255, 0.5);
+}
+
+.description {
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--cosmic-text-dim);
+    position: relative;
+    padding: 2rem;
+    background: rgba(26, 28, 58, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(78, 61, 241, 0.3);
+    box-shadow: var(--cosmic-glow);
+}
+
+.description::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(0, 247, 255, 0.05), transparent);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.button {
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: var(--cosmic-glow);
+}
+
+.editBtn {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--cosmic-text);
+    background: var(--cosmic-accent);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.editBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cosmic-highlight);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.editBtn:hover {
+    color: var(--cosmic-primary);
+    box-shadow: var(--cosmic-glow-high);
+}
+
+.editBtn:hover::before {
+    width: 100%;
+}
+
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .aetheler {
+        font-size: 2.5rem;
+    }
+    
+    .nome {
+        font-size: 1.8rem;
+    }
+    
+    .profile-stats {
+        gap: 2rem;
+    }
+    
+    .number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .navbar {
+        gap: 1rem;
+    }
+    
+    .profile {
+        padding-top: 6rem;
+    }
+    
+    .aetheler {
+        font-size: 2rem;
+    }
+    
+    .nome {
+        font-size: 1.5rem;
+    }
+    
+    .profile-stats {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .aetheler {
+        font-size: 1.8rem;
+    }
+    
+    .nome {
+        font-size: 1.3rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .editBtn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .media {
+        gap: 1.5rem;
+    }
+    
+    .linkar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}

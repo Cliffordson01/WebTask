@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    color: #E0E0E0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Efeito de estrelas */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, #EEE, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #FFF, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #DDD, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    z-index: -1;
+    animation: stars 50s linear infinite;
+}
+
+@keyframes stars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+.header {
+    background: rgba(11, 13, 23, 0.8);
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #4A6DA7;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #4A6DA7;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4A6DA7, transparent);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #B8C7E0;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #FFF;
+    background: rgba(74, 109, 167, 0.3);
+    text-shadow: 0 0 10px #4A6DA7;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: #4A6DA7;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 60%;
+}
+
+/* Container principal */
+.testimonials-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #FFF;
+    text-shadow: 0 0 15px #4A6DA7;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4A6DA7, transparent);
+    margin: 10px auto;
+}
+
+/* Grid de testemunhos */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Estilo do blockquote */
+blockquote {
+    background: rgba(23, 28, 48, 0.7);
+    border-left: 4px solid #4A6DA7;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+blockquote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 109, 167, 0.3);
+    border-left-color: #6D8FD3;
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 40px;
+    color: rgba(74, 109, 167, 0.3);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+blockquote p {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #E0E0E0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Rodapé do blockquote */
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4A6DA7;
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(74, 109, 167, 0.5);
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #FFF;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.testimonial-role {
+    display: block;
+    font-size: 0.8rem;
+    color: #B8C7E0;
+    font-style: normal;
+    margin-top: 2px;
+}
+
+/* Efeito de brilho */
+.glow-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at center, rgba(74, 109, 167, 0.1), transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+
+/* Tablets e telas maiores que 600px */
+@media (min-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+    
+    .logo {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    
+    .navbar {
+        padding: 0;
+        gap: 15px;
+    }
+    
+    .navbar a {
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    blockquote {
+        padding: 25px;
+    }
+}
+
+/* Telas maiores que 900px (desktops) */
+@media (min-width: 900px) {
+    .header {
+        padding: 20px 50px;
+    }
+    
+    .logo {
+        font-size: 34px;
+    }
+    
+    .navbar a {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    blockquote {
+        padding: 30px;
+    }
+    
+    blockquote::before {
+        font-size: 60px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    blockquote p {
+        font-size: 1.1rem;
+    }
+    
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Telas muito grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .testimonials-container {
+        padding: 0;
+    }
+}

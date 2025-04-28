@@ -1,0 +1,63 @@
+/* Estilo básico para o layout */
+body {
+    font-family: 'Tektur', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/dark_blue_gradient_background.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área da página */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
+}
+
+h1 {
+    font-family: 'Tektur', sans-serif;
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    
+    margin-bottom: 100px;
+    
+    
+}
+
+
+.button {
+    display: grid; /*  */
+    grid-template-columns: repeat(2,1fr); /* 2 colunas para os botões */
+    gap: 20px; /* Espaçamento entre os botões */
+    justify-items: center; /* Centraliza os botões dentro de cada célula */
+    margin-top: 20px;/* Adiciona um pequeno espaçamento acima dos botões */
+    margin-right: 60px;
+}
+
+.instagram, .linkedin {
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;  /* Faz os botões ocuparem toda a largura do contêiner */
+}
+.instagram {
+    background-color: #0077b5; /* Cor do Instagram */
+}
+
+/* Cor do botão LinkedIn */
+.linkedin {
+    background-color: #0077b5; /* Cor do LinkedIn */
+}
+
+.instagram:hover,.linkedin:hover{
+    opacity: 0.8;
+    background-color: #555;
+}
+
+
+

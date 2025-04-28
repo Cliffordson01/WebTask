@@ -1,0 +1,154 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Iceland", sans-serif;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 50px; /* Reduz a margem superior */
+    margin-bottom: 20px; /* Adiciona uma margem inferior menor */
+}
+
+.welcome {
+    font-size: 30px;
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo da seção principal */
+.main {
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch; /* Faz as seções internas terem a mesma altura */
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Garante que as bordas arredondadas sejam aplicadas corretamente */
+}
+
+/* Estilo da seção gráfica */
+.grafic {
+    flex: 1; /* Ocupa metade do espaço */
+    background-color: #ccc; /* Cor de fundo temporária */
+}
+
+.estilo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40% 50%;
+}
+
+.login {
+    flex: 1; /* Ocupa metade do espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative; /* Permite posicionar o pseudo-elemento */
+    overflow: hidden; /* Garante que o pseudo-elemento não ultrapasse os limites */
+}
+
+/* Pseudo-elemento para a imagem de fundo com opacidade */
+.login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Img/7856001.jpg); /* Caminho da imagem */
+    background-size: cover; /* Cobrir todo o espaço */
+    background-position: 30% 50%; /* Centralizar a imagem */
+    opacity: 0.5; /* Controla a opacidade da imagem (0 a 1) */
+    z-index: 1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+/* Garante que o conteúdo fique acima da imagem de fundo */
+.login > * {
+    position: relative;
+    z-index: 2; /* Coloca o conteúdo na frente do pseudo-elemento */
+}
+
+
+  /* Estilo dos inputs */
+.acount {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.name, .email, .password {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #000; /* Contorno preto */
+    border-radius: 15px 0; /* Bordas arredondadas apenas no canto superior esquerdo e inferior direito */
+    font-size: 16px;
+    outline: none; /* Remove o contorno padrão ao focar */
+}
+
+.name:focus, .email:focus, .password:focus {
+    border-color: #F45D52; /* Muda a cor da borda ao focar */
+}
+
+/* Estilo do placeholder */
+.name::placeholder,
+.email::placeholder,
+.password::placeholder {
+    color: #F68179; /* Cor acinzentada */
+    font-style: italic; /* Texto em itálico (opcional) */
+}
+
+.name:focus::placeholder,
+.email:focus::placeholder,
+.password:focus::placeholder {
+    color: transparent; /* Faz o placeholder desaparecer ao focar */
+}
+
+  /* Estilo da dica de força da senha */
+.tips {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+ /* Estilo dos botões */
+.btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.create, .btnTwo {
+    flex: 1; /* Faz os botões ocuparem o espaço disponível igualmente */
+    height: 40px;
+    border: 2px solid #000; /* Contorno preto */
+    border-radius: 15px 0; /* Bordas arredondadas apenas no canto superior esquerdo e inferior direito */
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.create:hover, .btnTwo:hover {
+    background-color: #F45D52; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    border-color: #F45D52; /* Cor da borda ao passar o mouse */
+}

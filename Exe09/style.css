@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #e0e0e0;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.header {
+    background: rgba(15, 12, 41, 0.8);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #4e54c8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    margin: 10px;
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(142, 45, 226, 0.3);
+    display: inline-block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #b8b8ff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.9rem;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(78, 84, 200, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: #fff;
+    background: rgba(78, 84, 200, 0.2);
+    box-shadow: 0 0 10px rgba(78, 84, 200, 0.5);
+}
+
+.navbar a:hover::before {
+    left: 100%;
+}
+
+.listTarefa {
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+fieldset {
+    border: 1px solid #4e54c8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(15, 12, 41, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    box-shadow: 0 10px 25px rgba(78, 84, 200, 0.3);
+    border-color: #8e2de2;
+}
+
+legend {
+    color: #b8b8ff;
+    font-weight: 700;
+    padding: 0 10px;
+    font-size: 1rem;
+    background: linear-gradient(90deg, #4a00e0, #8e2de2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Estilo para as tarefas */
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 0;
+    padding: 12px;
+    background: rgba(46, 49, 146, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.task-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+    transition: width 0.3s ease;
+}
+
+.task-container:hover {
+    background: rgba(78, 84, 200, 0.3);
+    transform: translateY(-2px);
+}
+
+.task-container:hover::before {
+    width: 6px;
+}
+
+.task-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4e54c8;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    background: rgba(15, 12, 41, 0.4);
+    flex-shrink: 0;
+}
+
+.task-container input[type="checkbox"]:hover {
+    border-color: #8e2de2;
+    box-shadow: 0 0 8px rgba(142, 45, 226, 0.5);
+}
+
+.task-container input[type="checkbox"]:checked {
+    background: #4a00e0;
+    border-color: #8e2de2;
+}
+
+.task-container input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task-container label {
+    flex-grow: 1;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 150px;
+}
+
+.task-container input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #b8b8ff;
+    opacity: 0.8;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: 0;
+    flex-wrap: wrap;
+}
+
+.task-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    font-size: 0.85rem;
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    color: white;
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #e10000, #c31432);
+    color: white;
+}
+
+.task-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-btn:active {
+    transform: translateY(0);
+}
+
+/* Estilo para o formulário de adição */
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-task-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.95rem;
+    border: 1px solid rgba(78, 84, 200, 0.5);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.add-task-form input[type="text"]:focus {
+    outline: none;
+    border-color: #8e2de2;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(142, 45, 226, 0.3);
+}
+
+.add-task-form input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 176, 155, 0.2);
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+
+/* Tablets e telas maiores que 600px */
+@media (min-width: 600px) {
+    .header {
+        padding: 20px 0;
+    }
+    
+    .logo {
+        font-size: 2.2rem;
+        margin: 15px;
+    }
+    
+    .navbar {
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .navbar a {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+    
+    .listTarefa {
+        max-width: 90%;
+        margin: 40px auto;
+    }
+    
+    fieldset {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    
+    legend {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .task-container {
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .task-container input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .task-container label {
+        font-size: 1.05rem;
+    }
+    
+    .task-actions {
+        gap: 10px;
+    }
+    
+    .task-btn {
+        padding: 8px 15px;
+        min-width: 80px;
+        font-size: 0.9rem;
+    }
+    
+    .add-task-form {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .add-btn {
+        width: auto;
+        padding: 10px 25px;
+    }
+}
+
+/* Telas maiores que 900px (desktops) */
+@media (min-width: 900px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        text-align: left;
+    }
+    
+    .logo {
+        margin: 0;
+    }
+    
+    .navbar {
+        margin-top: 0;
+    }
+    
+    .listTarefa {
+        max-width: 800px;
+    }
+    
+    .task-container {
+        flex-wrap: nowrap;
+    }
+    
+    .task-actions {
+        margin-left: 15px;
+    }
+    
+    .task-btn {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Telas muito grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .header {
+        padding: 20px 50px;
+    }
+    
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .navbar a {
+        padding: 10px 25px;
+    }
+    
+    .listTarefa {
+        max-width: 850px;
+    }
+}

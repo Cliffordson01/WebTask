@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Cósmica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Partículas cósmicas -->
+      <div class="cosmic-particle" style="width: 2px; height: 2px; top: 10%; left: 20%; animation-duration: 20s;"></div>
+      <div class="cosmic-particle" style="width: 1px; height: 1px; top: 30%; left: 70%; animation-duration: 25s;"></div>
+      <div class="cosmic-particle" style="width: 3px; height: 3px; top: 50%; left: 40%; animation-duration: 15s;"></div>
+      <div class="cosmic-particle" style="width: 1px; height: 1px; top: 70%; left: 80%; animation-duration: 30s;"></div>
+  
+      <header class="header">
+          <a href="#" class="logo">UNIVERSO INFINITO</a>
+          <nav class="navbar">
+              <a href="#galaxias">Galáxias</a>
+              <a href="#nebulosas">Nebulosas</a>
+              <a href="#estrelas">Estrelas</a>
+              <a href="#planetas">Planetas</a>
+          </nav>
+      </header>
+  
+      <main class="gallery-container">
+          <!-- Seção Galáxias -->
+          <section id="galaxias" class="gallery-section main-category">
+              <h2>Galáxias</h2>
+              <div class="gallery-grid">
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Galáxia Andrômeda" loading="lazy">
+                      <figcaption>Andrômeda</figcaption>
+                      <a href="#andromeda-view" class="thumbnail-link" aria-label="Expandir imagem da Galáxia Andrômeda"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Via Láctea" loading="lazy">
+                      <figcaption>Via Láctea</figcaption>
+                      <a href="#via-lactea-view" class="thumbnail-link" aria-label="Expandir imagem da Via Láctea"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="Galáxia do Redemoinho" loading="lazy">
+                      <figcaption>Redemoinho</figcaption>
+                      <a href="#redemoinho-view" class="thumbnail-link" aria-label="Expandir imagem da Galáxia Redemoinho"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Andrômeda -->
+              <div id="andromeda-sub" class="subcategory">
+                  <a href="#galaxias" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Andrômeda Vista 1" loading="lazy">
+                      <figcaption>Andrômeda Vista 1</figcaption>
+                      <a href="#andromeda-1-view" class="thumbnail-link" aria-label="Expandir imagem Andrômeda Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Andrômeda Vista 2" loading="lazy">
+                      <figcaption>Andrômeda Vista 2</figcaption>
+                      <a href="#andromeda-2-view" class="thumbnail-link" aria-label="Expandir imagem Andrômeda Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Andrômeda Vista 3" loading="lazy">
+                      <figcaption>Andrômeda Vista 3</figcaption>
+                      <a href="#andromeda-3-view" class="thumbnail-link" aria-label="Expandir imagem Andrômeda Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Via Láctea -->
+              <div id="via-lactea-sub" class="subcategory">
+                  <a href="#galaxias" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Via Láctea Vista 1" loading="lazy">
+                      <figcaption>Via Láctea Vista 1</figcaption>
+                      <a href="#via-lactea-1-view" class="thumbnail-link" aria-label="Expandir imagem Via Láctea Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Via Láctea Vista 2" loading="lazy">
+                      <figcaption>Via Láctea Vista 2</figcaption>
+                      <a href="#via-lactea-2-view" class="thumbnail-link" aria-label="Expandir imagem Via Láctea Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Via Láctea Vista 3" loading="lazy">
+                      <figcaption>Via Láctea Vista 3</figcaption>
+                      <a href="#via-lactea-3-view" class="thumbnail-link" aria-label="Expandir imagem Via Láctea Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Redemoinho -->
+              <div id="redemoinho-sub" class="subcategory">
+                  <a href="#galaxias" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="Redemoinho Vista 1" loading="lazy">
+                      <figcaption>Redemoinho Vista 1</figcaption>
+                      <a href="#redemoinho-1-view" class="thumbnail-link" aria-label="Expandir imagem Redemoinho Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="Redemoinho Vista 2" loading="lazy">
+                      <figcaption>Redemoinho Vista 2</figcaption>
+                      <a href="#redemoinho-2-view" class="thumbnail-link" aria-label="Expandir imagem Redemoinho Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="Redemoinho Vista 3" loading="lazy">
+                      <figcaption>Redemoinho Vista 3</figcaption>
+                      <a href="#redemoinho-3-view" class="thumbnail-link" aria-label="Expandir imagem Redemoinho Vista 3"></a>
+                  </figure>
+              </div>
+          </section>
+  
+          <!-- Seção Nebulosas -->
+          <section id="nebulosas" class="gallery-section main-category">
+              <h2>Nebulosas</h2>
+              <div class="gallery-grid">
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Nebulosa do Caranguejo" loading="lazy">
+                      <figcaption>Caranguejo</figcaption>
+                      <a href="#caranguejo-view" class="thumbnail-link" aria-label="Expandir imagem da Nebulosa do Caranguejo"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80" alt="Nebulosa de Órion" loading="lazy">
+                      <figcaption>Órion</figcaption>
+                      <a href="#orion-view" class="thumbnail-link" aria-label="Expandir imagem da Nebulosa de Órion"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Nebulosa da Águia" loading="lazy">
+                      <figcaption>Águia</figcaption>
+                      <a href="#aguia-view" class="thumbnail-link" aria-label="Expandir imagem da Nebulosa da Águia"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Caranguejo -->
+              <div id="caranguejo-sub" class="subcategory">
+                  <a href="#nebulosas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Caranguejo Vista 1" loading="lazy">
+                      <figcaption>Caranguejo Vista 1</figcaption>
+                      <a href="#caranguejo-1-view" class="thumbnail-link" aria-label="Expandir imagem Caranguejo Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Caranguejo Vista 2" loading="lazy">
+                      <figcaption>Caranguejo Vista 2</figcaption>
+                      <a href="#caranguejo-2-view" class="thumbnail-link" aria-label="Expandir imagem Caranguejo Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Caranguejo Vista 3" loading="lazy">
+                      <figcaption>Caranguejo Vista 3</figcaption>
+                      <a href="#caranguejo-3-view" class="thumbnail-link" aria-label="Expandir imagem Caranguejo Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Órion -->
+              <div id="orion-sub" class="subcategory">
+                  <a href="#nebulosas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80" alt="Órion Vista 1" loading="lazy">
+                      <figcaption>Órion Vista 1</figcaption>
+                      <a href="#orion-1-view" class="thumbnail-link" aria-label="Expandir imagem Órion Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80" alt="Órion Vista 2" loading="lazy">
+                      <figcaption>Órion Vista 2</figcaption>
+                      <a href="#orion-2-view" class="thumbnail-link" aria-label="Expandir imagem Órion Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80" alt="Órion Vista 3" loading="lazy">
+                      <figcaption>Órion Vista 3</figcaption>
+                      <a href="#orion-3-view" class="thumbnail-link" aria-label="Expandir imagem Órion Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Águia -->
+              <div id="aguia-sub" class="subcategory">
+                  <a href="#nebulosas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Águia Vista 1" loading="lazy">
+                      <figcaption>Águia Vista 1</figcaption>
+                      <a href="#aguia-1-view" class="thumbnail-link" aria-label="Expandir imagem Águia Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Águia Vista 2" loading="lazy">
+                      <figcaption>Águia Vista 2</figcaption>
+                      <a href="#aguia-2-view" class="thumbnail-link" aria-label="Expandir imagem Águia Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Águia Vista 3" loading="lazy">
+                      <figcaption>Águia Vista 3</figcaption>
+                      <a href="#aguia-3-view" class="thumbnail-link" aria-label="Expandir imagem Águia Vista 3"></a>
+                  </figure>
+              </div>
+          </section>
+  
+          <!-- Seção Estrelas -->
+          <section id="estrelas" class="gallery-section main-category">
+              <h2>Estrelas</h2>
+              <div class="gallery-grid">
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80" alt="Estrela Sirius" loading="lazy">
+                      <figcaption>Sirius</figcaption>
+                      <a href="#sirius-view" class="thumbnail-link" aria-label="Expandir imagem da Estrela Sirius"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Estrela Betelgeuse" loading="lazy">
+                      <figcaption>Betelgeuse</figcaption>
+                      <a href="#betelgeuse-view" class="thumbnail-link" aria-label="Expandir imagem da Estrela Betelgeuse"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Estrela Vega" loading="lazy">
+                      <figcaption>Vega</figcaption>
+                      <a href="#vega-view" class="thumbnail-link" aria-label="Expandir imagem da Estrela Vega"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Sirius -->
+              <div id="sirius-sub" class="subcategory">
+                  <a href="#estrelas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80" alt="Sirius Vista 1" loading="lazy">
+                      <figcaption>Sirius Vista 1</figcaption>
+                      <a href="#sirius-1-view" class="thumbnail-link" aria-label="Expandir imagem Sirius Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80" alt="Sirius Vista 2" loading="lazy">
+                      <figcaption>Sirius Vista 2</figcaption>
+                      <a href="#sirius-2-view" class="thumbnail-link" aria-label="Expandir imagem Sirius Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80" alt="Sirius Vista 3" loading="lazy">
+                      <figcaption>Sirius Vista 3</figcaption>
+                      <a href="#sirius-3-view" class="thumbnail-link" aria-label="Expandir imagem Sirius Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Betelgeuse -->
+              <div id="betelgeuse-sub" class="subcategory">
+                  <a href="#estrelas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Betelgeuse Vista 1" loading="lazy">
+                      <figcaption>Betelgeuse Vista 1</figcaption>
+                      <a href="#betelgeuse-1-view" class="thumbnail-link" aria-label="Expandir imagem Betelgeuse Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Betelgeuse Vista 2" loading="lazy">
+                      <figcaption>Betelgeuse Vista 2</figcaption>
+                      <a href="#betelgeuse-2-view" class="thumbnail-link" aria-label="Expandir imagem Betelgeuse Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Betelgeuse Vista 3" loading="lazy">
+                      <figcaption>Betelgeuse Vista 3</figcaption>
+                      <a href="#betelgeuse-3-view" class="thumbnail-link" aria-label="Expandir imagem Betelgeuse Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Vega -->
+              <div id="vega-sub" class="subcategory">
+                  <a href="#estrelas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Vega Vista 1" loading="lazy">
+                      <figcaption>Vega Vista 1</figcaption>
+                      <a href="#vega-1-view" class="thumbnail-link" aria-label="Expandir imagem Vega Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Vega Vista 2" loading="lazy">
+                      <figcaption>Vega Vista 2</figcaption>
+                      <a href="#vega-2-view" class="thumbnail-link" aria-label="Expandir imagem Vega Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Vega Vista 3" loading="lazy">
+                      <figcaption>Vega Vista 3</figcaption>
+                      <a href="#vega-3-view" class="thumbnail-link" aria-label="Expandir imagem Vega Vista 3"></a>
+                  </figure>
+              </div>
+          </section>
+  
+          <!-- Seção Planetas -->
+          <section id="planetas" class="gallery-section main-category">
+              <h2>Planetas</h2>
+              <div class="gallery-grid">
+                  <figure class="thumbnail">
+                      <img src="img/jup1.jpeg" alt="Júpiter" loading="lazy">
+                      <figcaption>Júpiter</figcaption>
+                      <a href="#jupiter-view" class="thumbnail-link" aria-label="Expandir imagem de Júpiter"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="img/sat1.jpeg" alt="Saturno" loading="lazy">
+                      <figcaption>Saturno</figcaption>
+                      <a href="#saturno-view" class="thumbnail-link" aria-label="Expandir imagem de Saturno"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="img/mat1.jpeg" alt="Marte" loading="lazy">
+                      <figcaption>Marte</figcaption>
+                      <a href="#marte-view" class="thumbnail-link" aria-label="Expandir imagem de Marte"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Júpiter -->
+              <div id="jupiter-sub" class="subcategory">
+                  <a href="#planetas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="img/jup1.jpeg" alt="Júpiter Vista 1" loading="lazy">
+                      <figcaption>Júpiter Vista 1</figcaption>
+                      <a href="#jupiter-1-view" class="thumbnail-link" aria-label="Expandir imagem Júpiter Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="img/jup1.jpeg" alt="Júpiter Vista 2" loading="lazy">
+                      <figcaption>Júpiter Vista 2</figcaption>
+                      <a href="#jupiter-2-view" class="thumbnail-link" aria-label="Expandir imagem Júpiter Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="img/jup1.jpeg" alt="Júpiter Vista 3" loading="lazy">
+                      <figcaption>Júpiter Vista 3</figcaption>
+                      <a href="#jupiter-3-view" class="thumbnail-link" aria-label="Expandir imagem Júpiter Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Saturno -->
+              <div id="saturno-sub" class="subcategory">
+                  <a href="#planetas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1614314107768-8c2e6c4eca7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Saturno Vista 1" loading="lazy">
+                      <figcaption>Saturno Vista 1</figcaption>
+                      <a href="#saturno-1-view" class="thumbnail-link" aria-label="Expandir imagem Saturno Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1614314107768-8c2e6c4eca7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Saturno Vista 2" loading="lazy">
+                      <figcaption>Saturno Vista 2</figcaption>
+                      <a href="#saturno-2-view" class="thumbnail-link" aria-label="Expandir imagem Saturno Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1614314107768-8c2e6c4eca7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Saturno Vista 3" loading="lazy">
+                      <figcaption>Saturno Vista 3</figcaption>
+                      <a href="#saturno-3-view" class="thumbnail-link" aria-label="Expandir imagem Saturno Vista 3"></a>
+                  </figure>
+              </div>
+  
+              <!-- Subcategoria Marte -->
+              <div id="marte-sub" class="subcategory">
+                  <a href="#planetas" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Marte Vista 1" loading="lazy">
+                      <figcaption>Marte Vista 1</figcaption>
+                      <a href="#marte-1-view" class="thumbnail-link" aria-label="Expandir imagem Marte Vista 1"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Marte Vista 2" loading="lazy">
+                      <figcaption>Marte Vista 2</figcaption>
+                      <a href="#marte-2-view" class="thumbnail-link" aria-label="Expandir imagem Marte Vista 2"></a>
+                  </figure>
+                  <figure class="thumbnail">
+                      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Marte Vista 3" loading="lazy">
+                      <figcaption>Marte Vista 3</figcaption>
+                      <a href="#marte-3-view" class="thumbnail-link" aria-label="Expandir imagem Marte Vista 3"></a>
+                  </figure>
+              </div>
+          </section>
+      </main>
+  
+      <!-- Visualização em tela cheia para cada imagem -->
+      <!-- Galáxias -->
+      <div id="andromeda-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Galáxia Andrômeda" class="fullscreen-image">
+              <p class="fullscreen-caption">Galáxia Andrômeda</p>
+              <a href="#galaxias" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#redemoinho-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#via-lactea-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="via-lactea-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Via Láctea" class="fullscreen-image">
+              <p class="fullscreen-caption">Via Láctea</p>
+              <a href="#galaxias" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#andromeda-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#redemoinho-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="redemoinho-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="Galáxia do Redemoinho" class="fullscreen-image">
+              <p class="fullscreen-caption">Galáxia do Redemoinho</p>
+              <a href="#galaxias" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#via-lactea-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#andromeda-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+  
+      <!-- Nebulosas -->
+      <div id="caranguejo-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Nebulosa do Caranguejo" class="fullscreen-image">
+              <p class="fullscreen-caption">Nebulosa do Caranguejo</p>
+              <a href="#nebulosas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#aguia-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#orion-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="orion-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80" alt="Nebulosa de Órion" class="fullscreen-image">
+              <p class="fullscreen-caption">Nebulosa de Órion</p>
+              <a href="#nebulosas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#caranguejo-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#aguia-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="aguia-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Nebulosa da Águia" class="fullscreen-image">
+              <p class="fullscreen-caption">Nebulosa da Águia</p>
+              <a href="#nebulosas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#orion-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#caranguejo-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+  
+      <!-- Estrelas -->
+      <div id="sirius-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1194&q=80" alt="Estrela Sirius" class="fullscreen-image">
+              <p class="fullscreen-caption">Estrela Sirius</p>
+              <a href="#estrelas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#vega-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#betelgeuse-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="betelgeuse-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Estrela Betelgeuse" class="fullscreen-image">
+              <p class="fullscreen-caption">Estrela Betelgeuse</p>
+              <a href="#estrelas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#sirius-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#vega-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="vega-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=911&q=80" alt="Estrela Vega" class="fullscreen-image">
+              <p class="fullscreen-caption">Estrela Vega</p>
+              <a href="#estrelas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#betelgeuse-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#sirius-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+  
+      <!-- Planetas -->
+      <div id="jupiter-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="img/jup1.jpeg" alt="Júpiter" class="fullscreen-image">
+              <p class="fullscreen-caption">Júpiter</p>
+              <a href="#planetas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#marte-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#saturno-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="saturno-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="img/sat1.jpeg" alt="Saturno" class="fullscreen-image">
+              <p class="fullscreen-caption">Saturno</p>
+              <a href="#planetas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#jupiter-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#marte-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+      
+      <div id="marte-view" class="fullscreen-view">
+          <div class="fullscreen-content">
+              <img src="img/mat1.jpeg" alt="Marte" class="fullscreen-image">
+              <p class="fullscreen-caption">Marte</p>
+              <a href="#planetas" class="close-btn" aria-label="Fechar visualização em tela cheia">×</a>
+              <a href="#saturno-view" class="nav-btn prev" aria-label="Imagem anterior">‹</a>
+              <a href="#jupiter-view" class="nav-btn next" aria-label="Próxima imagem">›</a>
+          </div>
+      </div>
+</body>
+</html>

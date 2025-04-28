@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+.cabecalho-fixo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.cabecalho-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.cabecalho-titulo {
+  margin: 0;
+  font-size: 24px;
+}
+
+.menu-navegacao {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  margin: 0;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.menu-link:hover {
+  background-color: #4CAF50;
+}
+
+.principal {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(66, 58, 58);
+}
+
+.container-pai {
+  display: flex; 
+  gap: 50px;
+  justify-content: center;
+  padding: 50px ;
+  max-width: 2000px; /* Largura máxima para o container pai */
+  margin: 0 auto;
+  overflow-x: auto; /* Permite rolagem horizontal se necessário */
+}
+
+.produto-container {
+  flex: 0 0 auto; /* Não cresce, não encolhe */
+  width: 700px; /* Largura fixa para cada produto */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0; /* Removido margin auto que centralizava verticalmente */
+}
+
+.produto-imagem {
+  width: 100%;
+  border-radius: 10px;
+  height: 500px;/* Altura fixa para consistência */
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+}
+
+.produto-titulo {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.produto-descricao {
+  font-size: 16px;
+  margin: 15px 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.produto-preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.botao-compra {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.botao-compra:hover {
+  background-color: #45a049;
+}

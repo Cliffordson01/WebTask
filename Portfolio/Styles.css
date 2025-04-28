@@ -1,0 +1,599 @@
+:root {
+    --cosmic-primary: #0b0c21;
+    --cosmic-secondary: #1a1c3a;
+    --cosmic-accent: #4e3df1;
+    --cosmic-highlight: #00f7ff;
+    --cosmic-text: #e0e0ff;
+    --cosmic-text-dim: #a0a0c0;
+    --cosmic-glow: 0 0 10px rgba(78, 61, 241, 0.7);
+    --cosmic-glow-high: 0 0 20px rgba(0, 247, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, var(--cosmic-primary) 0%, #000000 100%);
+    color: var(--cosmic-text);
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://assets.codepen.io/13471/stars.png') repeat;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(11, 12, 33, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(78, 61, 241, 0.3);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cosmic-highlight);
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: var(--cosmic-glow);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: var(--cosmic-glow-high);
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--cosmic-text-dim);
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cosmic-highlight);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+    width: 100%;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(78, 61, 241, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    animation: pulse 15s infinite alternate;
+}
+
+.home-content {
+    max-width: 600px;
+    position: relative;
+}
+
+.home-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+}
+
+.text-animate h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--cosmic-highlight);
+    margin-bottom: 2rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 3rem;
+    color: var(--cosmic-text-dim);
+}
+
+.btn-box {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: var(--cosmic-accent);
+    border: 2px solid var(--cosmic-accent);
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--cosmic-text);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: var(--cosmic-glow);
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: var(--cosmic-accent);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cosmic-highlight);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.btn-box a:hover {
+    color: var(--cosmic-primary);
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--cosmic-highlight);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--cosmic-highlight);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: var(--cosmic-glow);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cosmic-highlight);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.home-sci a:hover {
+    color: var(--cosmic-primary);
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.1), transparent);
+    animation: shine 3s infinite;
+}
+
+.about {
+    padding: 8rem 5%;
+    position: relative;
+}
+
+.heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+}
+
+.heading span {
+    color: var(--cosmic-accent);
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.about-img {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.about-img::before {
+    content: '';
+    position: absolute;
+    
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 2px solid var(--cosmic-primary);
+    border-right: 2px solid var(--cosmic-highlight);
+    border-bottom: 2px solid var(--cosmic-primary);
+    border-left: 2px solid var(--cosmic-highlight);
+    animation: spin 10s linear infinite;
+    
+}
+
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: 2px solid var(--cosmic-highlight);
+    box-shadow: var(--cosmic-glow-high);
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--cosmic-highlight);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--cosmic-text-dim);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--cosmic-accent);
+    color: var(--cosmic-text);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    box-shadow: var(--cosmic-glow);
+}
+
+.btn:hover {
+    background: var(--cosmic-highlight);
+    color: var(--cosmic-primary);
+    transform: translateY(-5px);
+    box-shadow: var(--cosmic-glow-high);
+}
+
+.education {
+    padding: 8rem 5%;
+    position: relative;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    background: linear-gradient(135deg, var(--cosmic-secondary) 0%, var(--cosmic-primary) 100%);
+    border: 1px solid rgba(78, 61, 241, 0.3);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--cosmic-glow);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--cosmic-glow-high);
+    z-index: 10;
+}
+
+.portfolio-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(11, 12, 33, 0.9) 0%, transparent 100%);
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-content {
+    transform: translateY(0);
+}
+
+.portfolio-item h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--cosmic-highlight);
+}
+
+.portfolio-item h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--cosmic-text-dim);
+}
+
+.portfolio-item p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--cosmic-text);
+}
+
+.portfolio-item a {
+    color: var(--cosmic-highlight);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    text-shadow: var(--cosmic-glow);
+}
+
+/* Cosmic elements replacing images */
+.cosmic-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cosmic-element-1 {
+    background: radial-gradient(circle, rgba(0, 247, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 8s infinite alternate;
+}
+
+.cosmic-element-2 {
+    background: conic-gradient(from 45deg, transparent, rgba(78, 61, 241, 0.3), transparent);
+    animation: spin 20s linear infinite;
+}
+
+.cosmic-element-3 {
+    background: linear-gradient(45deg, transparent, rgba(0, 247, 255, 0.1), transparent);
+}
+
+.cosmic-element-4 {
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 247, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(78, 61, 241, 0.2) 0%, transparent 50%);
+    animation: pulse 6s infinite alternate-reverse;
+}
+
+.cosmic-element-5 {
+    background: 
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 247, 255, 0.1) 10px, rgba(0, 247, 255, 0.1) 20px);
+}
+
+.cosmic-element-6 {
+    background: 
+        radial-gradient(circle, transparent 40%, rgba(78, 61, 241, 0.2) 100%);
+    animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@media (max-width: 1024px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    
+    .text-animate h3 {
+        font-size: 2rem;
+    }
+    
+    .heading {
+        font-size: 3rem;
+    }
+    
+    .about-text h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .navbar {
+        gap: 1rem;
+    }
+    
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+    }
+    
+    .home-content {
+        margin-bottom: 3rem;
+    }
+    
+    .home-imgHover {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin-top: 2rem;
+    }
+    
+    .btn-box {
+        justify-content: center;
+    }
+    
+    .home-sci {
+        justify-content: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .text-animate h3 {
+        font-size: 1.5rem;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .btn-box {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .btn-box a {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .about-img {
+        width: 250px;
+        height: 250px;
+    }
+}

@@ -1,0 +1,296 @@
+:root {
+    --cosmic-primary: #0b0c21;
+    --cosmic-secondary: #1a1c3a;
+    --cosmic-accent: #4e3df1;
+    --cosmic-highlight: #00f7ff;
+    --cosmic-text: #e0e0ff;
+    --cosmic-text-dim: #a0a0c0;
+    --cosmic-glow: 0 0 10px rgba(78, 61, 241, 0.7);
+    --cosmic-glow-high: 0 0 20px rgba(0, 247, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, var(--cosmic-primary) 0%, #000000 100%);
+    color: var(--cosmic-text);
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://assets.codepen.io/13471/stars.png') repeat;
+    z-index: -2;
+    opacity: 0.8;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(11, 12, 33, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(78, 61, 241, 0.3);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cosmic-highlight);
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: var(--cosmic-glow);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: var(--cosmic-glow-high);
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--cosmic-text-dim);
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cosmic-highlight);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow);
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.7;
+    filter: brightness(0.8) contrast(1.2);
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(11, 12, 33, 0.9) 0%,
+        rgba(11, 12, 33, 0.5) 50%,
+        rgba(11, 12, 33, 0.9) 100%
+    );
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.aether {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--cosmic-highlight);
+    text-shadow: var(--cosmic-glow-high);
+    letter-spacing: 10px;
+    margin-bottom: 2rem;
+    line-height: 1;
+    transition: all 0.5s ease;
+}
+
+.titulo:hover .aether {
+    -webkit-text-stroke: 3px var(--cosmic-highlight);
+    text-shadow: 0 0 30px var(--cosmic-highlight);
+}
+
+.button {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.btn {
+    position: relative;
+    padding: 1rem 3rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--cosmic-text);
+    background: transparent;
+    border: 2px solid var(--cosmic-highlight);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    box-shadow: var(--cosmic-glow);
+    backdrop-filter: blur(5px);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 247, 255, 0.3),
+        transparent
+    );
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background: rgba(0, 247, 255, 0.2);
+    box-shadow: var(--cosmic-glow-high);
+    transform: translateY(-1px) translateX(-2%);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Cosmic pulse animation */
+@keyframes cosmicPulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .aether {
+        font-size: 8rem;
+        -webkit-text-stroke: 1.5px var(--cosmic-highlight);
+    }
+    
+    .btn {
+        padding: 0.8rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .aether {
+        font-size: 5rem;
+        letter-spacing: 5px;
+        -webkit-text-stroke: 1px var(--cosmic-highlight);
+    }
+    
+    .btn {
+        padding: 0.8rem 2rem;
+        top: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .aether {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.9rem;
+        top: 55%;
+    }
+    
+    .navbar a {
+        font-size: 0.9rem;
+        margin: 0.5rem;
+    }
+}

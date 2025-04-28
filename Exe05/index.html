@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Aether</a>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+     
+    <div class="welcome">
+        <h1>Contact Aether</h1>
+        <p>Your one-stop solution for all your needs. Send us a message and we'll get back to you as soon as possible.</p>
+    </div>
+
+    <section class="hero">
+        <form action="Contatar" method="post" class="contact">
+            <fieldset class="pessoais">
+                <legend>Informações pessoais</legend>
+                <label for="name">Nome completo</label>
+                <input class="fill" type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+
+                <label for="email">Email</label>
+                <input class="fill" type="email" id="email" name="email" required placeholder="Digite seu email">
+
+                <label for="Senha">Senha</label>
+                <input class="fill" type="password" id="Senha" name="Senha" required placeholder="Digite sua senha">
+            </fieldset>
+
+            <fieldset class="preferenciais">
+                <legend>Preferenciais</legend>
+                <label for="Interesses">Interesses:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input class="Check" type="checkbox" id="Tech" name="Interesses" value="Tech">
+                        <label for="Tech">Tecnologia</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input class="Check" type="checkbox" id="Esportes" name="Interesses" value="Esportes">
+                        <label for="Esportes">Esportes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input class="Check" type="checkbox" id="Calistenia" name="Interesses" value="Calistenia">
+                        <label for="Calistenia">Calistenia</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input class="Check" type="checkbox" id="Muay Thai" name="Interesses" value="Muay Thai">
+                        <label for="Muay Thai">Muay Thai</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset class="estado">
+                <legend>Localização</legend>
+                <label for="estado">Estado</label>
+                <select class="States" name="estado" id="estado">
+                    <option value="">Selecione o estado</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                </select>
+            </fieldset>
+            
+            <div class="messag">
+                <label for="Mensagem">Mensagem</label>
+                <textarea class="Msg" id="Mensagem" name="Mensagem" rows="4" required placeholder="Digite sua mensagem"></textarea>
+            </div>
+            
+            <div class="form-buttons">
+                <button class="btn" type="submit">Enviar</button>
+                <button class="btn" type="reset">Limpar</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
