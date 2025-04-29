@@ -19,7 +19,7 @@ Cada exercício propõe o uso obrigatório de uma **tag HTML** e uma **proprieda
 - [10. Página de Testemunhos](#10-página-de-testemunhos)
 - [11. Página de Mapa do Site](#11-página-de-mapa-do-site)
 - [12. Página de Galeria de Fotos](#12-página-de-galeria-de-fotos)
-- [13. Página de Galeria Cósmica](#13-página-de-galeria-cósmética)
+- [13. Página de Galeria Cósmética](#13-página-de-galeria-cósmética)
 - [14. Página de Perfil de Equipe](#14-página-de-perfil-de-equipe)
 - [15. Página de Lançamento de Produto](#15-página-de-lançamento-de-produto)
 
