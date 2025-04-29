@@ -145,7 +145,7 @@ Cada exercício propõe o uso obrigatório de uma **tag HTML** e uma **proprieda
 
 ---
 
-## 13. Página de Galeria Cósmica
+## 13. Página de Galeria Cósmética
 - **Tag HTML**: `<figure>`
 - **Propriedade CSS**: `display: grid`
 - **Descrição**:  
