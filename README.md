@@ -188,7 +188,7 @@ Cada exercício propõe o uso obrigatório de uma **tag HTML** e uma **proprieda
 /pagina-testemunhos
 /pagina-mapa-site
 /pagina-galeria
-/pagina-galeria-cosmica
+/pagina-galeria-cosmética
 /pagina-faq
 /pagina-perfil-equipe
 /pagina-lancamento-produto
